@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Dealership.Models;
+using System.Collections.Generic;
 
 namespace Dealership.Controllers
 {
@@ -7,7 +8,10 @@ namespace Dealership.Controllers
   {
     // Routes
     [HttpGet("/add-cars")]
-    public ActionResult CreateCar() { return View(); }
+    public ActionResult CreateCar() 
+    {       
+      return View(); 
+    }
 
     // Adds car to inventory, rediects to index
     [HttpPost("/inventory")]
@@ -21,7 +25,8 @@ namespace Dealership.Controllers
     public ActionResult Index()
     {
       // pass a list of instances to the view
-      return View();
+      List<Car> cars = Car.GetInventory();
+      return View(cars);
     }
   }
 }
