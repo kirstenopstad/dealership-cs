@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project Name</title>
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Samy's Cars | Inventory</h1>
+    <p>Add cars to inventory by filling form below.</p>
+    <form action="/inventory" method="post">
+    @* Year *@
+    <label for="year">Year</label>
+    <input type="text" id="year" name="year">
+    @* Make *@
+    <label for="make">Make</label>
+    <input type="text" id="make" name="make">
+    @* Model *@
+    <label for="model">Model</label>
+    <input type="text" id="model" name="model">
+    <button type="submit">Add to Inventory</button>
+    </form>
+  </body>
+</html>
